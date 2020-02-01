@@ -1,0 +1,14 @@
+service: serverless-hello-world
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: cashback
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+        - http:
+            path: hello
+            method: get
